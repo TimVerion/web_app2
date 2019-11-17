@@ -20,7 +20,6 @@ Kernel 3.10+
 uname -r
 ```
 
-![2019-11-02_123238](F:\pics\docker\2019-11-02_123238.jpg)
 
 
 
@@ -92,7 +91,6 @@ docker pull daocloud.io/library/centos:latest
 docker images
 ```
 
-![2019-11-02_123602](F:\pics\docker\2019-11-02_123602.jpg)
 
 **11**.启动容器
 启动容器：
@@ -110,7 +108,6 @@ i：表示以“交互模式”运行容器
 t：表示容器启动后会进入其命令行
 v：表示需要将本地哪个目录挂载到容器中，格式：-v <宿主机目录>:<容器目录>
 
-![2019-11-02_124456](F:\pics\docker\2019-11-02_124456.jpg)
 
 可以看到我们已经进入到docker下载的容器里面呢,类似于一个空的linux系统
 
@@ -131,7 +128,6 @@ docker search tutorial
 docker search ubuntu
 ```
 
-![2019-11-02_125907](F:\pics\docker\2019-11-02_125907.jpg)
 
 解决方法
 
@@ -154,7 +150,6 @@ docker search ubuntu
 service docker restart
 ```
 
-![2019-11-02_130411](F:\pics\docker\2019-11-02_130411.jpg)
 
 成功！
 
@@ -164,7 +159,7 @@ service docker restart
 docker pull docker.io/rookout/tutorial-python
 ```
 
-![2019-11-02_141123](F:\pics\docker\2019-11-02_141123.jpg)
+
 
 ### 启动容器（后台模式）
 
@@ -229,7 +224,7 @@ runoob@runoob:~$ docker logs 2b1b7a428627
 
 我们使用 **docker stop** 命令来停止容器:
 
-![2019-11-02_141949](F:\pics\docker\2019-11-02_141949.jpg)
+
 
 通过 **docker ps** 查看，容器已经停止工作:
 
@@ -237,13 +232,13 @@ runoob@runoob:~$ docker logs 2b1b7a428627
 runoob@runoob:~$ docker ps
 ```
 
-![2019-11-02_142015](F:\pics\docker\2019-11-02_142015.jpg)
+
 
 可以看到容器已经不在了。
 
 也可以查看过去运行的情况:
 
-![2019-11-02_142248](F:\pics\docker\2019-11-02_142248.jpg)
+
 
 创建守护进程式容器：
 
@@ -315,7 +310,7 @@ mv docker-nginx-uwsgi-flask-py3 web_app
 cd web_app
 ```
 
-![2019-11-17_073755](F:\pics\docker\2019-11-17_073755.jpg)
+
 
 ```
 # 构建容器
@@ -328,7 +323,7 @@ docker build -t web_app .
 docker images
 ```
 
-![2019-11-17_075028](F:\pics\docker\2019-11-17_075028.jpg)
+
 
 执行以下命令启动自己的镜像，并指定映射端口为9999
 
@@ -364,7 +359,6 @@ docker tag d1f4e5558166 mayanhui/nginx_uwsgi_py3:alpine3.8
 docker push mayanhui/nginx_uwsgi_py3:alpine3.8
 ```
 
-![2019-11-17_075533](F:\pics\docker\2019-11-17_075533.jpg)
 
 这样在另外一台服务器就可以直接拉取这个镜像了
 
